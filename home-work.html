@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <input type="text" name="" id="inpt1">
+        <button id="btn1">btn1</button>
+        <br>
+        <input type="text" name="" id="inpt2">
+        <button id="btn2">btn2</button>
+        <br>
+        <button id="addition">Addition</button>
+    </main>
+
+    <script>
+        document.getElementById("inpt1").addEventListener("keyup", function (event) { // click event o deya jay
+            document.getElementById("btn1").addEventListener("click", function () {
+                console.log(event.target.value);
+            })
+        })
+
+        document.getElementById("inpt2").addEventListener("keyup", function (event) {
+            document.getElementById("btn2").addEventListener("click", function () {
+                console.log(event.target.value);
+            })
+        })
+
+        // addition
+        document.getElementById("addition").addEventListener("click", function () {
+            const firstValue = document.getElementById("inpt1").value;
+            const first = parseInt(firstValue);
+
+            const second = parseInt(document.getElementById("inpt2").value);
+            console.log(first + second);
+        });
+    </script>
+</body>
+
+</html>
